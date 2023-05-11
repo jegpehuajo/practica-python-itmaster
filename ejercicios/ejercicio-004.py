@@ -6,3 +6,10 @@ El programa debe mostrar por pantalla el resultado de sumar los tres numeros de 
 Ejemplo: Si el usuario ingresa 1, 2 y 3, el programa debe mostrar por pantalla: "1 + 2 + 3 = 6".
 
 """
+n1 = int(input("Ingrese un numero: "))
+n2 = int(input("Ingrese un numero: "))
+n3 = int(input("Ingrese un numero: "))
+
+suma = n1 + n2 + n3
+
+print(f"En numero {n1} + {n2} + {n3} = {suma}")
