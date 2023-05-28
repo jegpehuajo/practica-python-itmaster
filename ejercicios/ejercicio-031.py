@@ -14,5 +14,16 @@ COSTO_PAGINA = 10
 ENCUADERNACION_ESPECIAL = 1200
 PROCEDIMIENTO_ENCUADERNACION = 880
 
+numero_paginas = int(input("Ingrese el numero de paginas que tiene el libro: "))
 
-
+if numero_paginas <= 300 and numero_paginas > 0:
+    total = COSTO_BASICO + PLUS + (numero_paginas * COSTO_PAGINA)
+    print(f"El costo total del libro es: {total} y la encuadernación es rustica.")
+elif numero_paginas > 300 and numero_paginas <= 600:
+    total = COSTO_BASICO + PLUS + (numero_paginas * COSTO_PAGINA) + ENCUADERNACION_ESPECIAL
+    print(f"El costo total del libro es: {total} y la encuadernación especial cuesta: {ENCUADERNACION_ESPECIAL}")
+elif numero_paginas > 600:
+    total = COSTO_BASICO + PLUS + (numero_paginas * COSTO_PAGINA) + ENCUADERNACION_ESPECIAL + PROCEDIMIENTO_ENCUADERNACION
+    print(f"El costo total del libro es: {total} y tiene encuadernación especial y un procedimiento de encuadernación.")
+else:
+    print("El numero de paginas no es correcto.")
