@@ -7,9 +7,17 @@ numero = []
 
 print("Si ingresa 0 sale del programa.")
 
+def numero_maximo(numeros):
+    max = numeros[0]
+    for n in numeros:
+        if n > max:
+            max = n
+    return max
+
 while numero != 0:
     numero = int(input("Ingrese un numero: "))
     if numero != 0:
         numeros.append(numero)
-print(numeros)
 
+print(numeros)
+print(int(numero_maximo(numeros)))
