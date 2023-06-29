@@ -14,10 +14,18 @@ def numero_maximo(numeros):
             max = n
     return max
 
+def numero_minimo(numeros):
+    min = numeros[0]
+    for n in numeros:
+        if n < min:
+            min = n
+    return min
+
 while numero != 0:
     numero = int(input("Ingrese un numero: "))
     if numero != 0:
         numeros.append(numero)
 
-print(numeros)
-print(int(numero_maximo(numeros)))
+print("La lista completa de numeros es: ",numeros)
+print("El numero maximo es: ",int(numero_maximo(numeros)))
+print("El numero minimo es: ",int(numero_minimo(numeros)))
